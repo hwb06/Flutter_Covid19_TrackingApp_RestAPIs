@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen>
       AnimationController(duration: const Duration(seconds: 5), vsync: this)
         ..repeat();
 
+  @override
   void dispose(){
     super.dispose();
     _animationController.dispose();
