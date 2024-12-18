@@ -14,23 +14,28 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // Black primary color
-        primaryColor: Colors.black,
+        // Primary color as #E0F7FA (aqua blue)
+        primaryColor: const Color(0xFFE0F7FA),
 
-        // Black background color for scaffold (app's screen background)
-        scaffoldBackgroundColor: Colors.black,
+        // Background color for scaffold
+        scaffoldBackgroundColor: const Color(0xFFE0F7FA), // Light aqua blue background
 
         // Text color
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white),
-          bodyMedium: TextStyle(color: Colors.white),
-          displayLarge: TextStyle(color: Colors.white),
+          bodyLarge: TextStyle(color: Colors.white), // Black text for better contrast
+          bodyMedium: TextStyle(color: Colors.black),
+          displayLarge: TextStyle(color: Colors.black),
         ),
 
-        // AppBar color
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.black,
-          titleTextStyle: TextStyle(color: Colors.white),
+        // AppBar Theme
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFE0F7FA), // Light aqua blue AppBar
+          titleTextStyle: TextStyle(
+            color: Colors.black, // AppBar title color
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+          iconTheme: IconThemeData(color: Colors.black), // AppBar icons color
         ),
 
         // Material 3 style
