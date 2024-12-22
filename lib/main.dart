@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
         // Text color
         textTheme: const TextTheme(
-          bodyLarge: TextStyle(color: Colors.white), // Black text for better contrast
+          bodyLarge: TextStyle(color: Colors.black), // Black text for better contrast
           bodyMedium: TextStyle(color: Colors.black),
           displayLarge: TextStyle(color: Colors.black),
         ),

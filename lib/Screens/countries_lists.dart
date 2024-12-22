@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_covid19_trackingapp/Services/states_services.dart';
+import 'package:shimmer/shimmer.dart';
 
 class CountriesList extends StatefulWidget {
   @override
@@ -7,28 +9,109 @@ class CountriesList extends StatefulWidget {
 }
 
 class _CountriesListState extends State<CountriesList> {
+
+  TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    StatesServices statesServices = StatesServices();
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: Text("Countries List"),
         centerTitle: true,
       ),
-      body: Center(
-        child: Container(
-          height: 50,
-          width: 180,
-          decoration: BoxDecoration(
-              color: Color(0xff1aa260),
-              borderRadius: BorderRadius.circular(10)),
-          child: Center(
-            child: Text(
-              "Countries List",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,
-                  color: Colors.white),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                onChanged: (value){
+                  setState(() {
+
+                  });
+                },
+                controller: searchController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                    hintText: "Search With Country Name",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    )
+
+                ),
+              ),
             ),
-          ),
+            Expanded(
+              child: FutureBuilder(
+                future: statesServices.countriesListApi(),
+                builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+                  if (!snapshot.hasData) {
+                    return ListView.builder(
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return Shimmer.fromColors(
+                              baseColor: Colors.grey.shade700,
+                              highlightColor: Colors.grey.shade100,
+                            child: Column(
+                              children: [
+                                ListTile(
+                                  title: Container(height: 10, width: 89, color: Colors.white,),
+                                  subtitle: Container(height: 10, width: 89, color: Colors.white,),
+                                  leading: Container(height: 50, width: 50, color: Colors.white,),
+                                )
+                              ],
+                            ),);
+                        });
+                  } else {
+                    return ListView.builder(
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          String name = snapshot.data![index]['country'];
+
+                          if(searchController.text.isEmpty){
+                            return Column(
+                              children: [
+                                ListTile(
+                                  title: Text(snapshot.data![index]['country'],),
+                                  subtitle: Text(snapshot.data![index]['cases'].toString(),),
+                                  leading: Image(
+                                      height: 50,
+                                      width: 50,
+                                      image: NetworkImage(
+                                          snapshot.data![index]['countryInfo']
+                                          ['flag'])),
+                                )
+                              ],
+                            );
+                          } else if(name.toLowerCase().contains(searchController.text.toLowerCase())){
+                            return Column(
+                              children: [
+                                ListTile(
+                                  title: Text(snapshot.data![index]['country'],),
+                                  subtitle: Text(snapshot.data![index]['cases'].toString(),),
+                                  leading: Image(
+                                      height: 50,
+                                      width: 50,
+                                      image: NetworkImage(
+                                          snapshot.data![index]['countryInfo']
+                                          ['flag'])),
+                                )
+                              ],
+                            );
+                          } else{
+                            return Container();
+
+                          }
+
+
+                        });
+                  }
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
