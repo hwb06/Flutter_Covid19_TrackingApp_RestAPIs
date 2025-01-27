@@ -48,12 +48,9 @@ This app is perfect for anyone who wants to stay informed about the COVID-19 pan
 ### **App UIs Screenshots**
 Here are some screenshots of the app:
 
-![Splash Screen](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Splash%20Screen.PNG?raw=true)  
-![Main Dashboard](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Main%20Dashboard.PNG?raw=true)  
-![Track Country Lists](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Track%20Country%20Lists.PNG?raw=true)  
-![Details List 1](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Details%20List%201.PNG?raw=true)  
-![Details List 2](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Details%20List%202.PNG?raw=true)  
-![Details List 3](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/Details%20List%203.PNG?raw=true)  
+![#01](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/01.png)  
+![#02](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/02.png)  
+![#03](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/03.png)  
 
 ### **App Demo**
 You can download and view the demo video of the app here:
