@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
 
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 10),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => WorldStatesDb())));
   }
