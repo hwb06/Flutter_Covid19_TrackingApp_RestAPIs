@@ -48,9 +48,9 @@ This app is perfect for anyone who wants to stay informed about the COVID-19 pan
 ### **App UIs Screenshots**
 Here are some screenshots of the app:
 
-![#01](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/01.png)  
-![#02](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/02.png)  
-![#03](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/images/03.png)  
+![#01](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/Project%20Showcase/01.png)  
+![#02](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/Project%20Showcase/02.png)  
+![#03](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/blob/master/assets/Project%20Showcase/03.png)  
 
 ### **App Demo**
 You can download and view the demo video of the app here:
