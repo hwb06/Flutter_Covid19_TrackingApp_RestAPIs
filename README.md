@@ -55,7 +55,7 @@ Here are some screenshots of the app:
 ### **App Demo**
 You can download and view the demo video of the app here:
 
-[Covid19_TrackingApp_RestAPIs Link](https://github.com/hwb06/Flutter_Covid19_TrackingApp_RestAPIs/releases/tag/v1.0)
+[Covid19_TrackingApp_RestAPIs Link](https://youtu.be/nmEUFWLKRuE?si=iDSHNP-jI8ibnMfz)
 
 ## **Contact Information**
 If you have any questions or feedback, feel free to reach out:
